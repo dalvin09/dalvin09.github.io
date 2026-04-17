@@ -1,0 +1,51 @@
+baseURL = "https://dalvin09.github.io/"
+languageCode = "en-us"
+title = "Dalvin | Trader Portfolio"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  author = "Dalvin"
+  description = "Funded Forex & Options Trader | 5%ers | Documenting the process."
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  defaultTheme = "dark"
+
+  [params.homeInfoParams]
+    Title = "Dalvin — Trader Portfolio"
+    Content = """
+**Funded Forex Trader** (The5ers) & **Options Trader** (Personal Account).
+This site documents my trades, setups, and progress toward a desk-level career.
+All trade recaps include entry rationale, charts, and verified P&L.
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/dalvin09"
+
+[menu]
+  [[menu.main]]
+    name = "Forex (5%ers)"
+    url = "/forex/"
+    weight = 1
+  [[menu.main]]
+    name = "Options"
+    url = "/options/"
+    weight = 2
+  [[menu.main]]
+    name = "Playbook"
+    url = "/playbook/"
+    weight = 3
+  [[menu.main]]
+    name = "Dashboard"
+    url = "/dashboard/"
+    weight = 4
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
