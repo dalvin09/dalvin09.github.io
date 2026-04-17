@@ -13,4 +13,14 @@
     --theme: #1a1a1a !important;
   }
 </style>
+{{ else if eq .RelPermalink "/dashboard/" }}
+<style>
+  body {
+    background-image: url('/images/Gemini_Generated_Image_mgeo89mgeo89mgeo.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    --theme: transparent !important;
+  }
+</style>
 {{ end }}
