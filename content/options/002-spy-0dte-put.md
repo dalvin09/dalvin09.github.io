@@ -1,5 +1,5 @@
 ---
-title: "002 — SPY 0DTE Put | Overnight High Failure"
+title: "002 — SPY 0DTE 700P | Overnight High Failure"
 date: 2026-04-17
 tags: ["SPY", "0DTE", "puts", "auction-market-theory", "short-bias"]
 categories: ["options"]
@@ -12,7 +12,7 @@ draft: false
 | Field       | Detail               |
 |------------|----------------------|
 | Ticker      | SPY                  |
-| Type        | 0DTE Put             |
+| Type        | 0DTE Put (700P)      |
 | Contracts   | 1                    |
 | Entry       | $1.03                |
 | Exit        | $1.75                |
