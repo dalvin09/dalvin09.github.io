@@ -16,13 +16,19 @@ paginate = 10
   TocOpen = false
   defaultTheme = "dark"
 
-  [params.homeInfoParams]
-    Title = "Dalvin — Trader Portfolio"
-    Content = """
-**Funded Forex Trader** (The5ers) & **Options Trader** (Personal Account).
-This site documents my trades, setups, and progress toward a desk-level career.
-All trade recaps include entry rationale, charts, and verified P&L.
-"""
+  [params.profileMode]
+    enabled = true
+    title = "Dalvin"
+    subtitle = "Professional Trader | Futures & Forex | Auction Market Theory"
+    displayFullLangName = true
+
+    [[params.profileMode.buttons]]
+      name = "The Playbook"
+      url = "/playbook"
+
+    [[params.profileMode.buttons]]
+      name = "Live Dashboard"
+      url = "/dashboard"
 
   [[params.socialIcons]]
     name = "github"
@@ -30,21 +36,25 @@ All trade recaps include entry rationale, charts, and verified P&L.
 
 [menu]
   [[menu.main]]
-    name = "Forex (5%ers)"
+    identifier = "forex"
+    name = "Forex"
     url = "/forex/"
-    weight = 1
+    weight = 10
   [[menu.main]]
+    identifier = "options"
     name = "Options"
     url = "/options/"
-    weight = 2
+    weight = 20
   [[menu.main]]
+    identifier = "playbook"
     name = "Playbook"
     url = "/playbook/"
-    weight = 3
+    weight = 30
   [[menu.main]]
+    identifier = "dashboard"
     name = "Dashboard"
     url = "/dashboard/"
-    weight = 4
+    weight = 40
 
 [taxonomies]
   tag = "tags"
