@@ -1,4 +1,12 @@
-{{ if in (slice "forex" "options" "playbook") .Section }}
+{{ if eq .Section "forex" }}
+<style>
+  body { background-color: #7a0000 !important; --theme: #7a0000 !important; }
+</style>
+{{ else if eq .Section "options" }}
+<style>
+  body { background-color: #050505 !important; --theme: #050505 !important; }
+</style>
+{{ else if eq .Section "playbook" }}
 <style>
   body { background-color: #cc0000 !important; --theme: #cc0000 !important; }
 </style>
