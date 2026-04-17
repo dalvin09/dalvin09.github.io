@@ -1,15 +1,15 @@
 :root {
-    --theme: #0f172a;
-    --entry: #1e293b;
-    --primary: #f8fafc;
-    --secondary: #94a3b8;
-    --tertiary: #38bdf8;
-    --content: #cbd5e1;
+    --theme: #000000;       /* Pure Black */
+    --entry: #111111;       /* Slightly lighter black for cards */
+    --primary: #c0c0c0;     /* Silver text */
+    --secondary: #888888;   /* Muted silver */
+    --tertiary: #cc0000;    /* Deep Red accent */
+    --content: #a8a8a8;
 }
 
 .post-entry {
     background: var(--entry);
-    border: 1px solid #334155;
+    border: 1px solid #2a2a2a;
     border-radius: 12px;
     margin-bottom: 20px;
     padding: 20px;
@@ -19,4 +19,22 @@
 .post-entry:hover {
     transform: translateY(-5px);
     border-color: var(--tertiary);
+}
+
+a:hover {
+    color: var(--tertiary);
+}
+
+.profile-mode .profile_inner h1 {
+    color: #c0c0c0;
+}
+
+.btn {
+    border: 1px solid #cc0000;
+    color: #cc0000;
+}
+
+.btn:hover {
+    background: #cc0000;
+    color: #000000;
 }
