@@ -61,4 +61,4 @@ The **Overnight Halfback** is the midpoint of the overnight session's range. Whe
 
 ## Notes
 
-The formation context is the foundation. A gap that creates the overnight halfback test in A period is the cleanest version of this trade. Later period tests are possible but carry significantly lower odds. The more confluence — catalyst, A period timing, clean hold of the level — the more conviction is warranted in sizing.
+This trade works best and is often most potent early in the session. The formation context is the foundation. A gap that creates the overnight halfback test in A period is the cleanest version of this trade. Later period tests are possible but carry significantly lower odds. The more confluence — catalyst, A period timing, clean hold of the level — the more conviction is warranted in sizing.
