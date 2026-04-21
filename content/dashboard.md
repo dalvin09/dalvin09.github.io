@@ -22,7 +22,7 @@ summary: "Live stats, equity curve, and account overview."
 
 ## Equity Curve
 
-*(Embed MyFxBook widget or TraderSync equity chart screenshot here)*
+<a href="https://www.myfxbook.com/members/dalvin09/5-prop/12011784"><img alt="widget" src="https://widget.myfxbook.com/widget/widget.png?accountOid=12011784&type=1&color=red"/></a>
 
 ---
 
