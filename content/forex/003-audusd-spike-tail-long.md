@@ -43,7 +43,7 @@ Position sizing on AUDUSD needs adjustment. With 10 lots, the stop had no room t
 
 *(Add your chart screenshot here)*
 
-![Trade Chart](/images/audusd-spike-tail-long-chart.png)
+![Trade Chart](/images/audusd-spike-tail-long-chart.jpg)
 
 ---
 
