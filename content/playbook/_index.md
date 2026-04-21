@@ -3,7 +3,7 @@ title: "The Playbook"
 description: "Core setups broken down by market. Each entry documents the thesis, rules, and criteria."
 ---
 
-My documented edge — the setups I trade with defined criteria and rules. Click a section to explore individual setups.
+My documented edge — by market. Here are the setups I trade with defined rules and criteria. Click a section to learn more.
 
 ---
 
