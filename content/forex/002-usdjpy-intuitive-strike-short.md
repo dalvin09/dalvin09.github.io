@@ -43,7 +43,7 @@ Balance ranges in the dollar are bad for business. A directional fade setup requ
 
 *(Add your chart screenshot here)*
 
-![Trade Chart](/images/usdjpy-intuitive-strike-short-chart.png)
+![Trade Chart](/images/usdjpy-intuitive-strike-short-chart.jpeg)
 
 ---
 
