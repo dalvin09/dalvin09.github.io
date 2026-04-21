@@ -1,4 +1,18 @@
 ---
-title: "The Playbook — A+ Setups"
-description: "My core setups. Each entry documents the thesis, criteria, and historical examples."
+title: "The Playbook"
+description: "Core setups broken down by market. Each entry documents the thesis, rules, and criteria."
 ---
+
+My documented edge — the setups I trade with defined criteria and rules. Click a section to explore individual setups.
+
+---
+
+## [Forex Playbook →](/playbook/forex/)
+
+Setups built around Auction Market Theory, profile structure, and dollar relationships. Applied to major forex pairs during London and NY sessions.
+
+---
+
+## [Options Playbook →](/playbook/options/)
+
+Setups for 0DTE and short-term options plays. Built around momentum, structure, and defined risk.
