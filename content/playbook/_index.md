@@ -1,6 +1,7 @@
 ---
 title: "The Playbook"
 description: ""
+layout: "single"
 ---
 
 My documented edge — by market. Here are the setups I trade with defined rules and criteria. Click a section to learn more.
