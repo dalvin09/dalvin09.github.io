@@ -1,5 +1,5 @@
 ---
-title: "Setup: The HVN Rush"
+title: "Setup: The HVN Rush — Grade A"
 date: 2026-04-21
 tags: ["HVN", "forex", "news", "momentum", "profile-structure"]
 categories: ["playbook"]
