@@ -69,7 +69,7 @@ Before the Sunday event, the yen may give you a warning:
 
 ## Notes
 
-The Sunday Snack is rare by nature. The conditions — Sunday session, major Japanese catalyst, clean auction response — do not align often. That rarity is what makes it SSS rank. When it sets up correctly, it is one of the most asymmetric trades in the playbook.
+The Sunday Snack is rare by nature. The conditions — Sunday session, major Japanese catalyst, clean auction response — do not align often. That rarity is what makes it S rank. When it sets up correctly, it is one of the most asymmetric trades in the playbook.
 
 The biggest mistake with this setup is impatience: either entering before the news trying to predict direction, or exiting too early once the move begins. Both mistakes share the same root — distrust of the range. This market can move in ways that feel uncomfortable. That discomfort, when the thesis is intact, is the trade working exactly as it should.
 
