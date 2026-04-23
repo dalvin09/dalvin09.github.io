@@ -1,5 +1,5 @@
 ---
-title: "Setup: The Sunday Snack — Rank SSS"
+title: "Setup: The Sunday Snack — Rank S"
 date: 2026-04-23
 tags: ["usdjpy", "forex", "news", "japan", "sunday", "volatility", "auction-market-theory"]
 categories: ["playbook"]
