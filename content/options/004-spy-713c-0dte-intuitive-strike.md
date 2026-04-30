@@ -41,9 +41,16 @@ Ideally the plan was to scale out 70% and leave a runner toward the overnight hi
 
 ## Chart
 
-*(Add your chart screenshot here)*
-
-![Trade Chart](/images/004-spy-713c-0dte-intuitive-strike-chart.png)
+<div style="display: flex; gap: 12px;">
+  <div style="flex: 1;">
+    <img src="/images/spy intuitve strike trade 2.jpeg" alt="Intuitive Strike Trade 2" style="width: 100%;">
+    <p style="text-align: center; font-size: 0.85em; margin-top: 4px;">Intuitive Strike Trade 2</p>
+  </div>
+  <div style="flex: 1;">
+    <img src="/images/spy intuitve strike.jpeg" alt="Intuitive Strike Trade" style="width: 100%;">
+    <p style="text-align: center; font-size: 0.85em; margin-top: 4px;">Intuitive Strike Trade</p>
+  </div>
+</div>
 
 ---
 
