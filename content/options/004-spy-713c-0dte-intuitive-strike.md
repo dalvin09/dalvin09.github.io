@@ -1,5 +1,5 @@
 ---
-title: "004 — SPY 713C 0DTE | Profile Squeeze Off NQ Poor Low"
+title: "004 — SPY 713C 0DTE | Intuitive Strike Off NQ Poor Low"
 date: 2026-04-30
 tags: ["SPY", "calls", "options", "0dte", "market-profile", "intuitive-strike"]
 categories: ["options"]
@@ -43,7 +43,7 @@ Ideally the plan was to scale out 70% and leave a runner toward the overnight hi
 
 *(Add your chart screenshot here)*
 
-![Trade Chart](/images/004-spy-713c-0dte-profile-squeeze-chart.png)
+![Trade Chart](/images/004-spy-713c-0dte-intuitive-strike-chart.png)
 
 ---
 
