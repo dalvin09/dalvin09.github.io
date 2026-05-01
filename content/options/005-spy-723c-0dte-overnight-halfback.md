@@ -41,9 +41,7 @@ Capital constraints continue to limit proper scaling. With only one contract ava
 
 ## Chart
 
-*(Add your chart screenshot here)*
-
-![Trade Chart](/images/005-spy-723c-0dte-overnight-halfback-chart.png)
+![Trade Chart](/images/overnight halfback trade today.jpeg)
 
 ---
 
