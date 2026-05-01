@@ -66,7 +66,7 @@ These are confirmations, not triggers. The trigger is the feeling itself.
 
 ## Historical Examples
 
-*(Trade recaps tagged "intuitive-strike" will populate here)*
+{{< related-trades tag="intuitive-strike" >}}
 
 ---
 
