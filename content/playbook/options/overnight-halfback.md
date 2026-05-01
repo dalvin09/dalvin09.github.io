@@ -55,7 +55,7 @@ The **Overnight Halfback** is the midpoint of the overnight session's range. Whe
 
 ## Historical Examples
 
-*(Trade examples will be linked here as they are logged)*
+{{< related-trades tag="overnight-halfback" >}}
 
 ---
 

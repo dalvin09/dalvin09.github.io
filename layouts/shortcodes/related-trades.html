@@ -1,0 +1,18 @@
+{{ $tag := .Get "tag" }}
+{{ $trades := slice }}
+{{ range site.RegularPages }}
+  {{ if or (eq .Section "options") (eq .Section "forex") }}
+    {{ if in .Params.tags $tag }}
+      {{ $trades = $trades | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if $trades }}
+  <ul>
+    {{ range sort $trades "Date" "desc" }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Params.summary }}</li>
+    {{ end }}
+  </ul>
+{{ else }}
+  <p><em>No trade examples logged yet.</em></p>
+{{ end }}
