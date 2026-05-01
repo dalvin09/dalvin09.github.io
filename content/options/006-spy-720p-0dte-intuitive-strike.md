@@ -41,9 +41,7 @@ Not every intuitive strike works out — that's part of the trade. The key was r
 
 ## Chart
 
-*(Add your chart screenshot here)*
-
-![Trade Chart](/images/006-spy-720p-0dte-intuitive-strike-chart.png)
+![Trade Chart](/images/intuitve%20strike%20trade%203.jpeg)
 
 ---
 
