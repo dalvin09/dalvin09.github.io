@@ -15,6 +15,7 @@ summary: "Live stats, equity curve, and account overview."
 | Profit Factor       | —                 | 3.76               |
 | Avg Win             | —                 | +$92.67            |
 | Avg Loss            | —                 | -$37.00            |
+| Expectancy / Trade  | —                 | +$40.80            |
 | Total Trades        | —                 | 5                  |
 
 > Options stats last updated 2026-05-01. TraderSync exports used as source of truth.
