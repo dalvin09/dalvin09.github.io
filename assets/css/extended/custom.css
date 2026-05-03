@@ -1,36 +1,288 @@
-/* ── Colour Tokens ───────────────────────────────────────────── */
-:root {
-    --theme: #000000;
-    --entry: #111111;
-    --primary: #c0c0c0;
-    --secondary: #888888;
-    --tertiary: #cc0000;
-    --content: #a8a8a8;
+/* ================================================================
+   DALVIN | TRADER PORTFOLIO
+   Design: Terminal Dark — Precision Trading Aesthetic
+   ================================================================ */
+
+/* ── Fonts ────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ── Design Tokens ────────────────────────────────────────────── */
+:root,
+:root[data-theme="dark"] {
+    /* Surfaces */
+    --bg:        #050505;
+    --s1:        #0d0d0d;
+    --s2:        #141414;
+    --s3:        #1f1f1f;
+
+    /* Text */
+    --hi:        #efefef;
+    --mid:       #808080;
+    --lo:        #444444;
+
+    /* Brand: warmer, premium red */
+    --red:          #d63031;
+    --red-muted:    rgba(214, 48, 49, 0.08);
+    --red-soft:     rgba(214, 48, 49, 0.14);
+    --red-glow:     rgba(214, 48, 49, 0.22);
+    --red-border:   rgba(214, 48, 49, 0.30);
+
+    /* PaperMod token overrides */
+    --theme:     var(--bg);
+    --entry:     var(--s1);
+    --primary:   var(--hi);
+    --secondary: var(--mid);
+    --tertiary:  var(--s3);
+    --content:   #b0b0b0;
+    --border:    var(--s2);
+    --hljs-bg:   var(--s2);
+    --code-bg:   var(--s2);
+    --code-block-bg: var(--s2);
 }
 
-/* ── Custom Font (Inter) ─────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+/* ── Base ─────────────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Inter', sans-serif;
-    letter-spacing: -0.02em;
-    line-height: 1.6;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-optical-sizing: auto;
+    letter-spacing: -0.012em;
+    line-height: 1.65;
+    background: var(--bg);
+    color: var(--hi);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-code, pre, .post-content code {
+code, pre, kbd, samp,
+.post-content code {
+    font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+    font-feature-settings: "liga" 1, "calt" 1;
+}
+
+/* ── Selection ────────────────────────────────────────────────── */
+::selection {
+    background: var(--red-soft);
+    color: var(--red);
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+    background: var(--s3);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--lo); }
+
+/* ── Navigation ───────────────────────────────────────────────── */
+.header {
+    background: rgba(5, 5, 5, 0.88);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border-bottom: 1px solid var(--s2);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/* Site title */
+.logo a {
+    font-size: 1rem !important;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--hi) !important;
+    text-decoration: none;
+}
+
+/* Nav menu links */
+.menu a {
+    font-size: 0.75rem !important;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--mid) !important;
+    transition: color 0.15s ease;
+}
+
+.menu a:hover { color: var(--hi) !important; }
+
+.menu .active {
+    color: var(--hi) !important;
+    border-bottom: 1.5px solid var(--red) !important;
+    font-weight: 600;
+}
+
+/* Theme toggle */
+.theme-toggle svg { stroke: var(--mid); }
+.theme-toggle:hover svg { stroke: var(--hi); }
+
+/* ── Profile / Hero ───────────────────────────────────────────── */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(64vh - 60px);
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 1rem;
+}
+
+/* Subtle dot-grid background for hero */
+.profile::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 30%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Red ambient glow */
+.profile::after {
+    content: '';
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(214, 48, 49, 0.055) 0%, transparent 65%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -58%);
+    pointer-events: none;
+}
+
+.profile_inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Eyebrow label above the name */
+.profile_inner h1::before {
+    display: block;
+    content: "TRADE JOURNAL";
     font-family: 'JetBrains Mono', monospace;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: var(--red);
+    margin-bottom: 1.1rem;
+    opacity: 0.85;
 }
 
-/* ── Bento Grid ──────────────────────────────────────────────── */
+.profile_inner h1 {
+    font-size: clamp(2.6rem, 8vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: -0.055em;
+    color: var(--hi);
+    line-height: 1.0;
+    margin: 0 0 0.75rem;
+}
+
+.profile_inner span {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--mid);
+    letter-spacing: -0.005em;
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+}
+
+/* Profile image (if set) */
+.profile_inner img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 2px solid var(--s3);
+    box-shadow: 0 0 0 5px var(--red-muted);
+    margin-bottom: 2rem;
+    object-fit: cover;
+}
+
+/* Social icons */
+.social-icons {
+    margin: 1rem 0 !important;
+    gap: 0.75rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--s3);
+    background: var(--s1);
+    color: var(--mid);
+    transition: all 0.2s ease;
+}
+
+.social-icons a:hover {
+    border-color: var(--red-border);
+    background: var(--red-muted);
+    color: var(--red);
+}
+
+/* ── Hero Buttons ─────────────────────────────────────────────── */
+.buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 7px;
+    border: 1px solid var(--red-border);
+    background: var(--red-muted);
+    color: var(--red) !important;
+    text-decoration: none !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff !important;
+    box-shadow: 0 4px 20px var(--red-glow);
+    transform: translateY(-2px);
+}
+
+.button-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.55rem 1.35rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* ── Main Layout ──────────────────────────────────────────────── */
+.main {
+    padding: var(--gap);
+}
+
+/* ── Post Grid ────────────────────────────────────────────────── */
 .posts-list,
 #recent-posts,
 .post-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 14px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .posts-list,
     #recent-posts,
     .post-list {
@@ -38,116 +290,413 @@ code, pre, .post-content code {
     }
 }
 
-/* ── Trade Cards ─────────────────────────────────────────────── */
+/* ── Post Cards ───────────────────────────────────────────────── */
 .post-entry {
-    background: rgba(17, 17, 17, 0.7);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid #2a2a2a;
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 0;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: var(--s1);
+    border: 1px solid var(--s2);
+    border-left: 3px solid transparent;
+    border-radius: 10px;
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 0 !important;
+    position: relative;
+    overflow: hidden;
+    transition:
+        border-left-color 0.2s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subtle top edge highlight */
+.post-entry::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
+    pointer-events: none;
 }
 
 .post-entry:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(204, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.4);
-    border-color: var(--tertiary);
+    transform: translateY(-3px);
+    border-left-color: var(--red);
+    box-shadow:
+        0 12px 40px rgba(0,0,0,0.65),
+        0 4px 12px rgba(0,0,0,0.4),
+        inset 0 0 0 1px var(--s3);
 }
 
-/* ── Links ───────────────────────────────────────────────────── */
-a:hover {
-    color: var(--tertiary);
+/* Card title */
+.entry-header h2 {
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.025em !important;
+    color: var(--hi) !important;
+    line-height: 1.35 !important;
+    transition: color 0.15s;
 }
 
-/* ── Profile / Landing ───────────────────────────────────────── */
-.profile-mode .profile_inner h1 {
-    color: #c0c0c0;
+.post-entry:hover .entry-header h2 { color: var(--red) !important; }
+
+/* Card summary text */
+.entry-content {
+    font-size: 0.82rem !important;
+    color: var(--mid) !important;
+    line-height: 1.55 !important;
+    margin: 6px 0 !important;
+}
+
+/* Card footer/meta */
+.entry-footer {
+    font-size: 0.7rem !important;
+    color: var(--lo) !important;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.02em;
+}
+
+/* ── Tags ─────────────────────────────────────────────────────── */
+.post-tags a,
+.terms-tags a {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    background: var(--s2);
+    border: 1px solid var(--s3);
+    color: var(--mid);
+    text-decoration: none;
+    margin: 0.15em 0.15em 0.15em 0;
+    transition: all 0.15s ease;
+}
+
+.post-tags a:hover,
+.terms-tags a:hover {
+    background: var(--red-muted);
+    border-color: var(--red-border);
+    color: var(--red);
+}
+
+/* ── Single Post / Article ────────────────────────────────────── */
+.post-header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem) !important;
     font-weight: 700;
     letter-spacing: -0.04em;
+    line-height: 1.15;
+    color: var(--hi);
 }
 
-.profile-mode .profile_inner p {
-    color: var(--secondary);
+.post-meta {
+    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--lo);
+    letter-spacing: 0.02em;
 }
 
-/* ── Buttons ─────────────────────────────────────────────────── */
-.btn {
-    border: 1px solid #cc0000;
-    color: #cc0000;
-    border-radius: 8px;
-    transition: all 0.2s ease;
+.post-content {
+    font-size: 0.96rem;
+    line-height: 1.78;
+    color: var(--content);
 }
 
-.btn:hover {
-    background: #cc0000;
-    color: #000000;
-    box-shadow: 0 0 16px rgba(204, 0, 0, 0.4);
+.post-content h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--hi);
+    margin-top: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--s2);
 }
 
-/* ── Tables ──────────────────────────────────────────────────── */
+.post-content h3 {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-top: 2rem;
+}
+
+/* Horizontal rules */
+.post-content hr {
+    border: none;
+    border-top: 1px solid var(--s2);
+    margin: 2rem 0;
+}
+
+/* Blockquotes — styled as trading notes */
+.post-content blockquote {
+    border: none;
+    border-left: 3px solid var(--red);
+    background: var(--red-muted);
+    padding: 0.8rem 1.2rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.75rem 0;
+    color: var(--mid);
+    font-style: normal;
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+/* Inline code */
+.post-content code:not(pre code) {
+    background: var(--s2);
+    border: 1px solid var(--s3);
+    border-radius: 4px;
+    padding: 0.15em 0.45em;
+    font-size: 0.85em;
+    color: var(--red);
+}
+
+/* Code blocks */
+.post-content pre {
+    background: var(--s2) !important;
+    border: 1px solid var(--s3);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    overflow-x: auto;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin: 1.5rem 0;
+}
+
+/* ── Tables — Trade Data ───────────────────────────────────────── */
 .post-content table {
     border-collapse: collapse;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
+    border: 1px solid var(--s2);
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
 }
 
 .post-content th {
-    background: #1a0000;
-    color: #cc0000;
-    font-weight: 600;
-    letter-spacing: 0.04em;
+    background: var(--s2);
+    color: var(--mid);
+    font-weight: 500;
+    font-size: 0.68rem;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
-    font-size: 0.75rem;
-    padding: 10px 14px;
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    border-bottom: 1px solid var(--s3);
 }
 
 .post-content td {
-    border-bottom: 1px solid #1e1e1e;
-    padding: 10px 14px;
-    color: var(--primary);
+    padding: 0.65rem 1rem;
+    color: var(--hi);
+    border-bottom: 1px solid var(--s2);
+    transition: background 0.1s;
 }
 
-.post-content tr:last-child td {
-    border-bottom: none;
+.post-content tr:last-child td { border-bottom: none; }
+
+.post-content tr:hover td { background: var(--s2); }
+
+/* Label column (first cell) */
+.post-content td:first-child {
+    color: var(--mid);
+    font-size: 0.82rem;
+    font-family: 'JetBrains Mono', monospace;
 }
 
-/* ── Navigation ──────────────────────────────────────────────── */
-.nav {
-    border-bottom: 1px solid #1a1a1a;
-}
-
-/* ── Hide Footer Branding ────────────────────────────────────── */
-.footer span:last-child {
-    display: none;
-}
-
-/* ── Images (floating UI look) ───────────────────────────────── */
+/* ── Images ───────────────────────────────────────────────────── */
 .post-content img {
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    border: 1px solid var(--s2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    max-width: 100%;
+    display: block;
+    margin: 1.75rem auto;
 }
 
-/* ── Live Badge ──────────────────────────────────────────────── */
-.live-badge {
-    display: inline-block;
-    background: #cc0000;
-    color: #fff;
-    font-size: 0.65rem;
+/* ── Breadcrumbs ──────────────────────────────────────────────── */
+.breadcrumbs {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--lo);
+    letter-spacing: 0.04em;
+}
+
+.breadcrumbs a { color: var(--lo); }
+.breadcrumbs a:hover { color: var(--red); }
+
+/* ── TOC ──────────────────────────────────────────────────────── */
+.toc {
+    background: var(--s1);
+    border: 1px solid var(--s2);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 0.82rem;
+}
+
+.toc .inner { padding: 0; }
+
+#TableOfContents a { color: var(--mid); }
+#TableOfContents a:hover { color: var(--red); }
+
+/* ── Post Navigation ──────────────────────────────────────────── */
+.paginav {
+    border-top: 1px solid var(--s2);
+    padding-top: var(--gap);
+    margin-top: 3rem;
+    display: flex;
+    gap: var(--gap);
+}
+
+.paginav a {
+    border: 1px solid var(--s2);
+    border-radius: 8px;
+    padding: 0.75rem 1.1rem;
+    background: var(--s1);
+    color: var(--mid);
+    transition: all 0.2s;
+    text-decoration: none;
+    flex: 1;
+}
+
+.paginav a:hover {
+    border-color: var(--red-border);
+    background: var(--red-muted);
+    color: var(--hi);
+}
+
+/* ── Links ────────────────────────────────────────────────────── */
+a { transition: color 0.15s; }
+a:hover { color: var(--red); }
+
+.post-content a {
+    color: var(--red);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--red-border);
+}
+
+.post-content a:hover {
+    text-decoration-color: var(--red);
+}
+
+/* ── List Pages (Section Headers) ────────────────────────────── */
+.page-header h1,
+.archive-month-header {
+    font-size: 1.6rem;
     font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--hi);
+}
+
+.page-header .description {
+    color: var(--mid);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+/* Section divider line */
+.section-list-header {
+    border-bottom: 1px solid var(--s2);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--mid);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding: 2px 7px;
-    border-radius: 999px;
-    margin-left: 6px;
-    vertical-align: middle;
-    animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
+/* ── Footer ───────────────────────────────────────────────────── */
+.footer {
+    border-top: 1px solid var(--s2);
+    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--lo);
+    letter-spacing: 0.03em;
+}
+
+.footer a { color: var(--lo); }
+.footer a:hover { color: var(--red); }
+.footer span:last-child { display: none; } /* hide theme credit */
+
+/* ── Live Badge ───────────────────────────────────────────────── */
+.live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    background: var(--red-muted);
+    color: var(--red);
+    border: 1px solid var(--red-border);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.2em 0.65em;
+    border-radius: 999px;
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+
+.live-badge::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--red);
+    animation: blink 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes blink {
     0%, 100% { opacity: 1; }
-    50%       { opacity: 0.5; }
+    50%       { opacity: 0.3; }
+}
+
+/* ── P&L Utility Classes ──────────────────────────────────────── */
+.win, .positive { color: #22c55e !important; }
+.loss, .negative { color: var(--red) !important; }
+.flat, .neutral { color: var(--mid) !important; }
+
+/* ── Search Input ─────────────────────────────────────────────── */
+#searchbox input {
+    background: var(--s1) !important;
+    border: 1px solid var(--s2) !important;
+    color: var(--hi) !important;
+    border-radius: 8px;
+    padding: 0.6rem 1rem !important;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+}
+
+#searchbox input:focus {
+    outline: none !important;
+    border-color: var(--red-border) !important;
+    box-shadow: 0 0 0 3px var(--red-muted) !important;
+}
+
+/* ── Dashboard Table (Override for Wider Layout) ──────────────── */
+.post-content .dashboard-table table {
+    font-size: 0.82rem;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 480px) {
+    .profile_inner h1 { font-size: 2.75rem; }
+    .profile_inner h1::before { font-size: 0.55rem; letter-spacing: 0.16em; }
+    .post-entry { padding: 1rem 1.1rem; }
+    .buttons { margin-top: 1.5rem; gap: 0.5rem; }
+    .button-inner { padding: 0.5rem 1.1rem; font-size: 0.72rem; }
+    .post-content table { font-size: 0.78rem; }
+    .post-content th, .post-content td { padding: 0.5rem 0.75rem; }
+}
+
+/* ── Print ────────────────────────────────────────────────────── */
+@media print {
+    :root { --bg: #fff; --hi: #000; --mid: #444; }
+    .header, .footer { display: none; }
 }
