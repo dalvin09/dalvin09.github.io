@@ -43,7 +43,7 @@ Two flags were already present before entry: it was a Monday (a day with a histo
 
 *(Add your chart screenshot here)*
 
-![Trade Chart](/images/007-spy-722c-0dte-overnight-halfback-variation-chart.png)
+![Trade Chart](/images/IMG_2223.jpeg)
 
 ---
 
