@@ -42,9 +42,7 @@ Even the purple line is no match for a bank holiday in the country of the respec
 
 ## Chart
 
-*(Add your chart screenshot here)*
-
-![Trade Chart](/images/004-gbpusd-purple-line-long-chart.png)
+![Trade Chart](/images/IMG_2221.jpeg)
 
 ---
 
