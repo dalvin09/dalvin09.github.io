@@ -18,7 +18,7 @@ paginate = 10
 
   [params.profileMode]
     enabled = true
-    title = "Dalvin"
+    title = "Chevalier Capital"
     subtitle = "Professional Trader | Futures & Forex | Auction Market Theory"
     displayFullLangName = true
 
@@ -30,9 +30,6 @@ paginate = 10
       name = "Live Dashboard"
       url = "/dashboard"
 
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/dalvin09"
 
 [menu]
   [[menu.main]]

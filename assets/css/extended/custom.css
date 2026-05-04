@@ -118,6 +118,22 @@ code, pre, kbd, samp,
 .theme-toggle svg { stroke: var(--mid); }
 .theme-toggle:hover svg { stroke: var(--hi); }
 
+/* ── Homepage Shader Canvas ───────────────────────────────────── */
+#shader-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Hide the CSS pseudo-element backgrounds on homepage — canvas replaces them */
+body.home .profile::before,
+body.home .profile::after {
+    display: none;
+}
+
 /* ── Profile / Hero ───────────────────────────────────────────── */
 .profile {
     display: flex;

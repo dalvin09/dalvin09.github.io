@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>HVN on Dalvin | Trader Portfolio</title><link>https://dalvin09.github.io/tags/hvn/</link><description>Recent content in HVN on Dalvin | Trader Portfolio</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 21 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://dalvin09.github.io/tags/hvn/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup: The HVN Rush — Rank A</title><link>https://dalvin09.github.io/playbook/forex/hvn-rush/</link><pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate><guid>https://dalvin09.github.io/playbook/forex/hvn-rush/</guid><description>A precision news-driven setup using High Volume Nodes and halfback levels from the catalyst period as entry triggers.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HVN on Dalvin | Trader Portfolio</title>
+    <link>https://dalvin09.github.io/tags/hvn/</link>
+    <description>Recent content in HVN on Dalvin | Trader Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dalvin09.github.io/tags/hvn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup: The HVN Rush — Rank A</title>
+      <link>https://dalvin09.github.io/playbook/forex/hvn-rush/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://dalvin09.github.io/playbook/forex/hvn-rush/</guid>
+      <description>A precision news-driven setup using High Volume Nodes and halfback levels from the catalyst period as entry triggers.</description>
+    </item>
+  </channel>
+</rss>

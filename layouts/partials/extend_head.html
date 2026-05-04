@@ -1,3 +1,115 @@
+{{/* Homepage WebGL shader wave background */}}
+{{ if .IsHome }}
+<script>
+(function () {
+    window.addEventListener('DOMContentLoaded', function () {
+        var profile = document.querySelector('.profile');
+        if (!profile) return;
+
+        var canvas = document.createElement('canvas');
+        canvas.id = 'shader-bg';
+        profile.insertBefore(canvas, profile.firstChild);
+
+        var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        if (!gl) return;
+
+        function resize() {
+            canvas.width  = profile.offsetWidth;
+            canvas.height = profile.offsetHeight;
+            gl.viewport(0, 0, canvas.width, canvas.height);
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        var vs = 'attribute vec2 a_pos;void main(){gl_Position=vec4(a_pos,0.0,1.0);}';
+
+        var fs = [
+            'precision highp float;',
+            'uniform float u_time;',
+            'uniform vec2 u_res;',
+
+            'vec2 hash(vec2 p){',
+            '  p=vec2(dot(p,vec2(127.1,311.7)),dot(p,vec2(269.5,183.3)));',
+            '  return -1.0+2.0*fract(sin(p)*43758.5453);',
+            '}',
+
+            'float noise(vec2 p){',
+            '  vec2 i=floor(p),f=fract(p),u=f*f*(3.0-2.0*f);',
+            '  return mix(',
+            '    mix(dot(hash(i),f),dot(hash(i+vec2(1,0)),f-vec2(1,0)),u.x),',
+            '    mix(dot(hash(i+vec2(0,1)),f-vec2(0,1)),dot(hash(i+vec2(1,1)),f-vec2(1,1)),u.x),u.y);',
+            '}',
+
+            'float fbm(vec2 p){',
+            '  float v=0.0,a=0.5;',
+            '  mat2 m=mat2(1.6,1.2,-1.2,1.6);',
+            '  for(int i=0;i<5;i++){v+=a*noise(p);p=m*p;a*=0.5;}',
+            '  return v;',
+            '}',
+
+            'void main(){',
+            '  vec2 uv=gl_FragCoord.xy/u_res;',
+            '  float t=u_time*0.10;',
+
+            '  vec2 q=vec2(fbm(uv+t),fbm(uv+vec2(1.0,1.0)));',
+            '  vec2 r=vec2(',
+            '    fbm(uv+q+vec2(1.7,9.2)+0.15*t),',
+            '    fbm(uv+q+vec2(8.3,2.8)+0.126*t)',
+            '  );',
+            '  float f=fbm(uv+r);',
+
+            '  vec3 c=mix(',
+            '    vec3(0.010,0.004,0.004),',
+            '    vec3(0.110,0.012,0.012),',
+            '    clamp(f*f*4.0+0.5*f,0.0,1.0)',
+            '  );',
+            '  c=mix(c,vec3(0.055,0.008,0.008),clamp(length(q),0.0,1.0));',
+            '  c+=0.10*f*f*f;',
+
+            '  vec2 cv=uv-0.5;',
+            '  c*=1.0-dot(cv,cv)*2.2;',
+
+            '  gl_FragColor=vec4(c,1.0);',
+            '}'
+        ].join('\n');
+
+        function compile(type, src) {
+            var s = gl.createShader(type);
+            gl.shaderSource(s, src);
+            gl.compileShader(s);
+            return s;
+        }
+
+        var prog = gl.createProgram();
+        gl.attachShader(prog, compile(gl.VERTEX_SHADER, vs));
+        gl.attachShader(prog, compile(gl.FRAGMENT_SHADER, fs));
+        gl.linkProgram(prog);
+        gl.useProgram(prog);
+
+        var buf = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,1,1]), gl.STATIC_DRAW);
+        var loc = gl.getAttribLocation(prog, 'a_pos');
+        gl.enableVertexAttribArray(loc);
+        gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+        var uTime = gl.getUniformLocation(prog, 'u_time');
+        var uRes  = gl.getUniformLocation(prog, 'u_res');
+
+        var start = null;
+        function render(ts) {
+            if (!start) start = ts;
+            gl.uniform1f(uTime, (ts - start) / 1000.0);
+            gl.uniform2f(uRes, canvas.width, canvas.height);
+            gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+            requestAnimationFrame(render);
+        }
+        requestAnimationFrame(render);
+    });
+})();
+</script>
+{{ end }}
+
 {{/* Section-specific ambient color overlays */}}
 {{ if eq .Section "forex" }}
 <style>
