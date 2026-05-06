@@ -42,9 +42,7 @@ When the setup is SSS-ranked, waiting for confirmation is the mistake. The whole
 
 ## Chart
 
-*(Add your chart screenshot here)*
-
-![Trade Chart](/images/005-gbpusd-purple-line-hesitation-chart.png)
+![Trade Chart](/images/IMG_2228.jpeg)
 
 ---
 
