@@ -42,9 +42,7 @@ Clean read on the close — recognizing that three-wide balance after a new ATH 
 
 ## Chart
 
-*(Add your chart screenshot here)*
-
-![Trade Chart](/images/009-spy-730c-overnight-halfback-chart.png)
+![Trade Chart](/images/IMG_2227.jpeg)
 
 ---
 
