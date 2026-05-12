@@ -49,9 +49,9 @@ Closing at the TPO level was a logical decision — and the read on B-day struct
 
 ## Chart
 
-*(Add your chart screenshot here)*
+![Trade Chart 1](/images/IMG_2241.jpeg)
 
-![Trade Chart](/images/010-spy-735p-cpi-day-profile-reversal-chart.png)
+![Trade Chart 2](/images/IMG_2242.jpeg)
 
 ---
 
