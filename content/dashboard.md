@@ -10,15 +10,15 @@ summary: "Live stats, equity curve, and account overview."
 | Metric              | Forex (5%ers)              | Options (Personal) |
 |--------------------|----------------------------|--------------------|
 | Funded Capital      | —                          | —                  |
-| Net P&L (All Time)  | -$1,978 (excl. trade 001)  | +$352              |
-| Win Rate            | 40% (2W / 3L)              | 55.6% (5W / 4L)    |
-| Profit Factor       | 0.17                       | 3.27               |
-| Avg Win             | +$400 (1 known $ win)      | +$101.40           |
+| Net P&L (All Time)  | -$1,978 (excl. trade 001)  | +$478              |
+| Win Rate            | 40% (2W / 3L)              | 60% (6W / 4L)      |
+| Profit Factor       | 0.17                       | 4.08               |
+| Avg Win             | +$400 (1 known $ win)      | +$105.50           |
 | Avg Loss            | -$792.67                   | -$38.75            |
-| Expectancy / Trade  | —                          | +$39.11            |
-| Total Trades        | 5                          | 9                  |
+| Expectancy / Trade  | —                          | +$47.80            |
+| Total Trades        | 5                          | 10                 |
 
-> Stats last updated 2026-05-12. Trade 001 (forex) P&L recorded in R-multiples only (+2.1R) — excluded from dollar calculations. TraderSync exports used as source of truth.
+> Stats last updated 2026-05-13. Trade 001 (forex) P&L recorded in R-multiples only (+2.1R) — excluded from dollar calculations. TraderSync exports used as source of truth.
 
 ---
 
