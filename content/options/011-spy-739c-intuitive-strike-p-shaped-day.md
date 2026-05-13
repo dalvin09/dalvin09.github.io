@@ -41,9 +41,16 @@ At $65 per contract, the position represented roughly 13% of the account — ide
 
 ## Chart
 
-*(Add your chart screenshot here)*
-
-![Trade Chart](/images/011-spy-739c-intuitive-strike-p-shaped-day-chart.png)
+<div style="display: flex; gap: 12px;">
+  <div style="flex: 1;">
+    <img src="/images/IMG_2243.jpeg" alt="SPY 739C Trade Chart 1" style="width: 100%;">
+    <p style="text-align: center; font-size: 0.85em; margin-top: 4px;">SPY 739C — Chart 1</p>
+  </div>
+  <div style="flex: 1;">
+    <img src="/images/IMG_2245.jpeg" alt="SPY 739C Trade Chart 2" style="width: 100%;">
+    <p style="text-align: center; font-size: 0.85em; margin-top: 4px;">SPY 739C — Chart 2</p>
+  </div>
+</div>
 
 ---
 
