@@ -30,6 +30,10 @@ paginate = 10
       name = "Live Dashboard"
       url = "/dashboard"
 
+    [[params.profileMode.buttons]]
+      name = "Journal"
+      url = "/journal"
+
 
 [menu]
   [[menu.main]]
