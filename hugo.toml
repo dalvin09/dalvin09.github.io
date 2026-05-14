@@ -52,6 +52,11 @@ paginate = 10
     name = "Dashboard"
     url = "/dashboard/"
     weight = 40
+  [[menu.main]]
+    identifier = "journal"
+    name = "Journal"
+    url = "/journal/"
+    weight = 50
 
 [taxonomies]
   tag = "tags"
