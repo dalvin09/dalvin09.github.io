@@ -41,9 +41,9 @@ Summer trading conditions were underweighted in the plan. Big money is on vacati
 
 ## Chart
 
-*(Add your chart screenshot here)*
+![Trade Chart](/images/IMG_2267.jpeg)
 
-![Trade Chart](/images/015-spy-757c-p-shaped-rotation-fade-chart.png)
+![Trade Chart 2](/images/IMG_2268.jpeg)
 
 ---
 
